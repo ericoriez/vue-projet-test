@@ -1,26 +1,15 @@
 <template>
   <div id="app">
-    <h1>Bienvenue sur notre application météo</h1>
-    <button @click="onListClick">Voir les données météo</button>
-    <CitiesList></CitiesList>
+    <h1>Navigation dans l'application Vue</h1>
+    <router-link to="/">Accueil</router-link>
+    <router-link to="/cities"> Liste des Villes</router-link>
+    <router-view></router-view>
   </div>
 
 </template>
 
 <script>
-import CitiesList from './views/CitiesList.vue'
-export default {
-  name: "App",
-  methods:{
-    onListClick(){
-      alert("Liste des données méteo !")
-    }
-  },
 
-  components: {
-    CitiesList
-  }
-}
 
 </script>
 
